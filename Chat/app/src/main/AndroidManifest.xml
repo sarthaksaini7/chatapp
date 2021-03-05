@@ -1,0 +1,46 @@
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.android.sample"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+<application
+android:allowBackup="true"
+android:icon="@mipmap/ic_launcher"
+android:label="Chat-App"
+android:roundIcon="@mipmap/ic_launcher_round"
+android:supportsRtl="true"
+android:theme="@style/AppTheme" >
+
+<meta-data
+    android:name="com.applozic.application.key"
+    android:value="c4e259aa45b7a3d41aa0f84f1d130866" />
+
+<meta-data
+    android:name="com.package.name"
+    android:value="${applicationID}" />
+
+<activity android:name=".LoginActivity" />
+<activity android:name=".MainActivity">
+    <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+    </intent-filter>
+</activity>
+
+<activity
+    android:name="com.applozic.mobicomkit.uiwidgets.conversation.activity.ConversationActivity"
+    android:configChanges="keyboardHidden|screenSize|smallestScreenSize|screenLayout|orientation"
+    android:label="Chat App"
+    android:launchMode="singleTask"
+    android:parentActivityName=".MainActivity"
+    android:theme="@style/ApplozicTheme"
+    tools:replace="android.configChanges">
+    <!-- Parent activity meta-data to support API level 7+ -->
+    <meta-data
+        android:name="android.support.PARENT_ACTIVITY"
+        android:value=".MainActivity" />
+</activity>
+</application>
+    </manifest>
